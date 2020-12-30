@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
-
-    public float speed = 0.5f;
+    [SerializeField] float bgspeed = 5f;
 
     private MeshRenderer mesh_Renderer;
     // Start is called before the first frame update
@@ -17,7 +16,7 @@ public class Scroll : MonoBehaviour
     // Update is called once per frame 
     void Update()
     {
-        float y = Time.time * speed;
+        float y = Time.time * bgspeed;
         
         Vector2 offset = new Vector2(0, y);
 
