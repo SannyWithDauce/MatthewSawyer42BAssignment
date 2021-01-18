@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Enemy Wave Config")]
+[CreateAssetMenu(menuName = "Obstacle Wave Config")]
 public class WaveConfig : ScriptableObject
 {
     [SerializeField] GameObject obstaclePrefab;
@@ -11,11 +11,11 @@ public class WaveConfig : ScriptableObject
 
     [SerializeField] float timeBetweenSpawns = 1f;
 
-    [SerializeField] int numberOfEnemies = 5;
+    [SerializeField] int numberOfObstacles = 5;
 
-    [SerializeField] float enemyMoveSpeed = 3f;
+    [SerializeField] float obstacleMoveSpeed = 3f;
     // Start is called before the first frame update
-    public GameObject GetEnemyPreFab()
+    public GameObject GetObstaclePreFab()
     {
         return obstaclePrefab;
     }
@@ -34,12 +34,12 @@ public class WaveConfig : ScriptableObject
     {
         return timeBetweenSpawns;
     }
-    public int GetNumberOfEnemies()
+    public int GetNumberOfObstacles()
     {
-        return numberOfEnemies;
+        return numberOfObstacles;
     }
-    public float GetEnemyMoveSpeed()
+    public float GetObstacleMoveSpeed()
     {
-        return enemyMoveSpeed;
+        return obstacleMoveSpeed;
     }
 }

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f3ae171d6f440a45a6241c91d858283, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e34bfb0be5aaadb4c9f1ca2a0bc34244, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  enemymovespeed: 2.5
+  obstaclemovespeed: 2.5
   waveConfig: {fileID: 0}
 --- !u!114 &255637268001903096
 MonoBehaviour:
@@ -117,8 +117,8 @@ MonoBehaviour:
   shotCounter: 0
   minTimebetweenshots: 0.2
   maxTimebetweenshots: 3
-  enemyBulletPrefab: {fileID: 5075981943373234542, guid: 6fa84eb24a264944390973220ae5a49a, type: 3}
-  enemyBulletSpeed: 3
+  obstacleBulletPrefab: {fileID: 5075981943373234542, guid: 6fa84eb24a264944390973220ae5a49a, type: 3}
+  obstacleBulletSpeed: 5
   collision: 1
 --- !u!60 &-1347571951236109650
 PolygonCollider2D:

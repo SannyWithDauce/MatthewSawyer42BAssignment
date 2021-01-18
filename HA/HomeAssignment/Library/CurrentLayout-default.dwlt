@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1280
     height: 941
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 369
     height: 891
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 192}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 73
+  controlID: 115
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -202,7 +202,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 941
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -257,10 +257,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 891
-  m_MinSize: {x: 1113, y: 271}
-  m_MaxSize: {x: 26008, y: 10021}
+  m_MinSize: {x: 1111, y: 271}
+  m_MaxSize: {x: 26006, y: 10021}
   vertical: 0
-  controlID: 72
+  controlID: 120
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -389,7 +389,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32fbffff
+      m_ExpandedIDs: 2ef0ffff94f0ffff92f1ffffe8f8ffff36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -489,21 +489,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 54
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 54
-  m_LastProjectPath: C:\Users\Matthew Sawyer\Desktop\PCG Assignment\MatthewSawyer42BAssignment\HA\HomeAssignment
+  m_LastProjectPath: C:\Users\Matthew Sawyer\Desktop\PCG Assignment\MatthewSawyer42BAssignment-main\HA\HomeAssignment
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 143e0000
-    m_LastClickedID: 15892
-    m_ExpandedIDs: 00000000f23d000000ca9a3b
+    m_SelectedIDs: 2e3e0000
+    m_LastClickedID: 15918
+    m_ExpandedIDs: 000000001a3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -531,7 +531,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f23d0000
+    m_ExpandedIDs: 000000001a3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -712,9 +712,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.45196813, y: 3.8022094, z: -3.7816665}
+    m_Target: {x: 0.68372476, y: 2.273564, z: -0.62035906}
     speed: 2
-    m_Value: {x: -0.45196813, y: 3.8022094, z: -3.7816665}
+    m_Value: {x: 0.8067504, y: 2.163945, z: -0.5914834}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -765,9 +765,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.531475
+    m_Target: 6.7052746
     speed: 2
-    m_Value: 8.531475
+    m_Value: 6.4165306
   m_Ortho:
     m_Target: 1
     speed: 2

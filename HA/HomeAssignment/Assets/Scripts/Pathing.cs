@@ -6,7 +6,7 @@ public class Pathing : MonoBehaviour
 {
 
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] float enemymovespeed = 2.5f;
+    [SerializeField] float obstaclemovespeed = 2.5f;
 
     [SerializeField] WaveConfig waveConfig;
 
@@ -22,19 +22,19 @@ public class Pathing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnemyMove();
+        ObstacleMove();
     }
 
-    private void EnemyMove()
+    private void ObstacleMove()
     {
         if (waypointIndex <= waypoints.Count - 1){ 
             var targetPosition = waypoints[waypointIndex].transform.position;
 
             targetPosition.z = 0f;
 
-            var enemyMovement = waveConfig.GetEnemyMoveSpeed() * Time.deltaTime;
+            var obstacleMovement = waveConfig.GetObstacleMoveSpeed() * Time.deltaTime;
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, enemyMovement);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
 
             if (transform.position == targetPosition)
             {
