@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 5
   health: 20
+  playerHitSoundVolume: 0.4
+  playerHitSound: {fileID: 8300000, guid: 0bd4bc9aa4fc44d81830684b32de4276, type: 3}
 --- !u!60 &-2623821375841712620
 PolygonCollider2D:
   m_ObjectHideFlags: 0

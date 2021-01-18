@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
 
     [SerializeField] float health = 20f;
 
+    [SerializeField] [Range(0, 1)] float playerHitSoundVolume = 0.75f;
+
+    [SerializeField] AudioClip playerHitSound;
+
     float padding = 0.5f;
 
     float xMin, xMax, yMin, yMax;
@@ -57,6 +61,7 @@ public class Player : MonoBehaviour
 
         print("Hit");
         print(health);
+        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVolume);
 
         if (health <= 0)
         {

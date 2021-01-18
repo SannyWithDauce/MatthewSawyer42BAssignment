@@ -17,6 +17,10 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField] int collision = 1;
 
+    [SerializeField] AudioClip ObstacleDeathSound;
+
+    [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
+
     // Start is called before the first frame update
     void Start()
     {
