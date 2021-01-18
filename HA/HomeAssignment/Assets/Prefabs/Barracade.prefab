@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5759575445578822826}
   - component: {fileID: -9016470179981472863}
   - component: {fileID: -4368805286515857031}
-  m_Layer: 0
+  - component: {fileID: 7143136547509890793}
+  m_Layer: 1
   m_Name: Barracade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  enemymovespeed: 2.5
+  obstaclemovespeed: 2.5
   waveConfig: {fileID: 0}
 --- !u!60 &5759575445578822826
 PolygonCollider2D:
@@ -178,3 +179,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7143136547509890793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8099988113099982671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ba4dbaed68b1743a4e10781916976e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collision: 1
+  ObstacleDeathSound: {fileID: 8300000, guid: cbd6370dd1fb14f64ae4980612bf1e3c, type: 3}
+  ObstacleDeathSoundVolume: 0.75
+  health: 1

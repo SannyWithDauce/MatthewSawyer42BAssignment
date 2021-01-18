@@ -21,6 +21,8 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
 
+    [SerializeField] float health = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,5 +51,23 @@ public class Obstacle : MonoBehaviour
         GameObject bullet = Instantiate(obstacleBulletPrefab, transform.position, Quaternion.identity) as GameObject;
 
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-obstacleBulletSpeed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
+        ProcessHit(dmg);
+    }
+
+    private void ProcessHit(DamageDealer dmg)
+    {
+        health -= dmg.GetDamage();
+
+        AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
