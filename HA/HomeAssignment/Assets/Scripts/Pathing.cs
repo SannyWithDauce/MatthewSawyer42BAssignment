@@ -6,6 +6,7 @@ public class Pathing : MonoBehaviour
 {
 
     [SerializeField] List<Transform> waypoints;
+
     [SerializeField] float obstaclemovespeed = 2.5f;
 
     [SerializeField] WaveConfig waveConfig;

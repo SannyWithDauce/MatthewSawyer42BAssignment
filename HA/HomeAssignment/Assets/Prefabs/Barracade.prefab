@@ -188,10 +188,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8099988113099982671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ba4dbaed68b1743a4e10781916976e, type: 3}
+  m_Script: {fileID: 11500000, guid: e39ea5961909b1640a6306a95ccec233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collision: 1
   ObstacleDeathSound: {fileID: 8300000, guid: cbd6370dd1fb14f64ae4980612bf1e3c, type: 3}
   ObstacleDeathSoundVolume: 0.75
   health: 1
+  boom: {fileID: 4520248957101581913, guid: ec4e5051378213443a96ddda953b6ca8, type: 3}
+  explosionDuration: 1

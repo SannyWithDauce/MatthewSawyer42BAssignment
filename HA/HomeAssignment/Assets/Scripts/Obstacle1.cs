@@ -12,6 +12,10 @@ public class Obstacle1 : MonoBehaviour
 
     [SerializeField] float health = 1f;
 
+    [SerializeField] GameObject boom;
+
+    [SerializeField] float explosionDuration = 1f;
+
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
@@ -22,11 +26,17 @@ public class Obstacle1 : MonoBehaviour
     {
         health -= dmg.GetDamage();
 
-        AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
-
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Explode();
         }
+    }
+
+    private void Explode()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
+        GameObject explosion = Instantiate(boom, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
     }
 }

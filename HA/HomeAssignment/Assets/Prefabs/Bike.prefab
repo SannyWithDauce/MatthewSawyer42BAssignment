@@ -548,3 +548,5 @@ MonoBehaviour:
   ObstacleDeathSound: {fileID: 8300000, guid: d6c3d4f7c654540a68a223b0d4e19646, type: 3}
   ObstacleDeathSoundVolume: 0.75
   health: 1
+  boom: {fileID: 4520248957101581913, guid: ec4e5051378213443a96ddda953b6ca8, type: 3}
+  explosionDuration: 1

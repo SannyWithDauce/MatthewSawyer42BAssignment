@@ -23,6 +23,10 @@ public class Obstacle : MonoBehaviour
 
     [SerializeField] float health = 1f;
 
+    [SerializeField] GameObject boom;
+
+    [SerializeField] float explosionDuration = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +43,7 @@ public class Obstacle : MonoBehaviour
     {
         shotCounter -= Time.deltaTime;
 
-        if(shotCounter <= 0f)
+        if (shotCounter <= 0f)
         {
             ObstacleFire();
 
@@ -50,7 +54,7 @@ public class Obstacle : MonoBehaviour
     {
         GameObject bullet = Instantiate(obstacleBulletPrefab, transform.position, Quaternion.identity) as GameObject;
 
-        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-obstacleBulletSpeed);
+        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -obstacleBulletSpeed);
     }
 
     private void OnTriggerEnter2D(Collider2D otherObject)
@@ -63,11 +67,17 @@ public class Obstacle : MonoBehaviour
     {
         health -= dmg.GetDamage();
 
-        AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
-
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Explode();
         }
+    }
+
+    private void Explode()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, ObstacleDeathSoundVolume);
+        GameObject explosion = Instantiate(boom, transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
     }
 }
