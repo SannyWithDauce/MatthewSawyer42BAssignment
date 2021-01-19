@@ -7,6 +7,8 @@ public class Level : MonoBehaviour
 {
     [SerializeField] float wait = 2f;
 
+    [SerializeField] float waitq = 0.5f;
+
     IEnumerator Load()
     {
         yield return new WaitForSeconds(wait);
@@ -15,7 +17,7 @@ public class Level : MonoBehaviour
 
     IEnumerator LoadWin()
     {
-        yield return new WaitForSeconds(wait);
+        yield return new WaitForSeconds(waitq);
         SceneManager.LoadScene("Win");
     }
 

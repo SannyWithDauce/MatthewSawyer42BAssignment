@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] float movespeed = 5f;
 
-    [SerializeField] float health = 20f;
+    [SerializeField] int health = 50;
 
     [SerializeField] [Range(0, 1)] float playerHitSoundVolume = 0.75f;
 
@@ -85,5 +85,10 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<Level>().LoadWinner();
         }
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }
