@@ -98,9 +98,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 5
-  health: 20
+  health: 50
   playerHitSoundVolume: 0.4
   playerHitSound: {fileID: 8300000, guid: 0bd4bc9aa4fc44d81830684b32de4276, type: 3}
+  playerDeathSoundVolume: 0.75
+  playerDeathSound: {fileID: 8300000, guid: d6c3d4f7c654540a68a223b0d4e19646, type: 3}
+  boom: {fileID: 4520248957101581913, guid: ec4e5051378213443a96ddda953b6ca8, type: 3}
+  explosionDuration: 3
 --- !u!60 &-2623821375841712620
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -13,6 +13,12 @@ public class Level : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 
+    IEnumerator LoadWin()
+    {
+        yield return new WaitForSeconds(wait);
+        SceneManager.LoadScene("Win");
+    }
+
     public void LoadGame()
     {
         SceneManager.LoadScene("2D Game");
@@ -20,6 +26,10 @@ public class Level : MonoBehaviour
     public void LoadGameOver()
     {
         StartCoroutine(Load());
+    }
+    public void LoadWinner()
+    {
+        StartCoroutine(LoadWin());
     }
     public void LoadStartMenu()
     {

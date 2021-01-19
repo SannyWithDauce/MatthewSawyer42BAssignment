@@ -14,9 +14,19 @@ public class Player : MonoBehaviour
 
     [SerializeField] AudioClip playerHitSound;
 
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
+    [SerializeField] AudioClip playerDeathSound;
+
+    [SerializeField] GameObject boom;
+
+    [SerializeField] float explosionDuration = 3f;
+
     float padding = 0.5f;
 
     float xMin, xMax, yMin, yMax;
+
+    private static int score;
     void Start()
     {
         Border();
@@ -63,9 +73,17 @@ public class Player : MonoBehaviour
         print(health);
         AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVolume);
 
-        if (health <= 0)
+        if (health <= 0 && GameSession.score < 100)
         {
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+            GameObject explosion = Instantiate(boom, transform.position, Quaternion.identity);
+            Destroy(explosion, explosionDuration);
+            FindObjectOfType<Level>().LoadGameOver();
+        }
+        else if (health > 0 && GameSession.score >= 100)
+        {
+            FindObjectOfType<Level>().LoadWinner();
         }
     }
 }

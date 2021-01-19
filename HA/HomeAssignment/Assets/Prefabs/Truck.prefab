@@ -209,7 +209,7 @@ MonoBehaviour:
   minTimebetweenshots: 0.2
   maxTimebetweenshots: 3
   obstacleBulletPrefab: {fileID: 5075981943373234542, guid: 6fa84eb24a264944390973220ae5a49a, type: 3}
-  obstacleBulletSpeed: 0
+  obstacleBulletSpeed: 5
   collision: 1
   ObstacleDeathSound: {fileID: 8300000, guid: d6c3d4f7c654540a68a223b0d4e19646, type: 3}
   ObstacleDeathSoundVolume: 0.75

@@ -11,6 +11,8 @@ public class Pathing : MonoBehaviour
 
     [SerializeField] WaveConfig waveConfig;
 
+    [SerializeField] int scoreValue = 5;
+
     int waypointIndex = 0;
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,7 @@ public class Pathing : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
         }
     }
 
