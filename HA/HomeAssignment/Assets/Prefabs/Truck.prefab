@@ -103,6 +103,7 @@ MonoBehaviour:
   waypoints: []
   obstaclemovespeed: 2.5
   waveConfig: {fileID: 0}
+  scoreValue: 5
 --- !u!114 &7697884765256834070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotCounter: 0
   minTimebetweenshots: 0.2
-  maxTimebetweenshots: 3
+  maxTimebetweenshots: 2
   obstacleBulletPrefab: {fileID: 5075981943373234542, guid: 6fa84eb24a264944390973220ae5a49a, type: 3}
   obstacleBulletSpeed: 5
   collision: 1

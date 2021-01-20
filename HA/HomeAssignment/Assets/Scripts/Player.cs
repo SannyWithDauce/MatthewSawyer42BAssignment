@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+        WinOrLose();
     }
     private void Border()
     {
@@ -69,10 +70,17 @@ public class Player : MonoBehaviour
     {
         health -= dmg.GetDamage();
 
-        print("Hit");
-        print(health);
         AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVolume);
 
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    private void WinOrLose()
+    {
         if (health <= 0 && GameSession.score < 100)
         {
             Destroy(gameObject);
@@ -81,14 +89,10 @@ public class Player : MonoBehaviour
             Destroy(explosion, explosionDuration);
             FindObjectOfType<Level>().LoadGameOver();
         }
-        else if (health > 0 && GameSession.score >= 100)
+        else if (GameSession.score >= 100)
         {
             FindObjectOfType<Level>().LoadWinner();
         }
     }
-
-    public int GetHealth()
-    {
-        return health;
-    }
+        
 }

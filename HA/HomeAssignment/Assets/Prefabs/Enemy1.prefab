@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 308377241698275098}
   - component: {fileID: 1118260651805472936}
   - component: {fileID: -7734802641807743392}
-  - component: {fileID: -1963294371970899488}
   - component: {fileID: -934404315644327079}
-  - component: {fileID: -4465286457423622610}
+  - component: {fileID: 4296824259628845033}
+  - component: {fileID: -7687646656640670797}
   m_Layer: 1
   m_Name: Enemy1
   m_TagString: Untagged
@@ -102,6 +102,7 @@ MonoBehaviour:
   waypoints: []
   obstaclemovespeed: 2.5
   waveConfig: {fileID: 0}
+  scoreValue: 5
 --- !u!60 &-7734802641807743392
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -139,19 +140,6 @@ PolygonCollider2D:
       - {x: 2.34375, y: -0.53125}
       - {x: 2.34375, y: 0.46875}
       - {x: 2.078125, y: 0.78125}
---- !u!114 &-1963294371970899488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5138775151343011515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4a8d3c390d779b40bd0a8fcedabbdec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
 --- !u!50 &-934404315644327079
 Rigidbody2D:
   serializedVersion: 4
@@ -173,7 +161,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4465286457423622610
+--- !u!114 &4296824259628845033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,9 +173,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39ea5961909b1640a6306a95ccec233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collision: 1
   ObstacleDeathSound: {fileID: 8300000, guid: d6c3d4f7c654540a68a223b0d4e19646, type: 3}
   ObstacleDeathSoundVolume: 0.75
   health: 1
   boom: {fileID: 4520248957101581913, guid: ec4e5051378213443a96ddda953b6ca8, type: 3}
   explosionDuration: 1
+--- !u!114 &-7687646656640670797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138775151343011515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a8d3c390d779b40bd0a8fcedabbdec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

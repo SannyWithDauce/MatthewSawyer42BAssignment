@@ -102,6 +102,7 @@ MonoBehaviour:
   waypoints: []
   obstaclemovespeed: 2.5
   waveConfig: {fileID: 0}
+  scoreValue: 5
 --- !u!60 &5759575445578822826
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -32,7 +32,6 @@ public class GameSession : MonoBehaviour
     public void AddToScore(int scoreValue)
     {
         score += scoreValue;
-        print(score);
     }
 
     public void ResetGame()

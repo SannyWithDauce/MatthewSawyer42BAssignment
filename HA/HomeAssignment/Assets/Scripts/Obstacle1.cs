@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Obstacle1 : MonoBehaviour
 {
-    [SerializeField] int collision = 1;
-
     [SerializeField] AudioClip ObstacleDeathSound;
 
     [SerializeField] [Range(0, 1)] float ObstacleDeathSoundVolume = 0.75f;
